@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+nav{
+    background-color: rgb(100, 65, 230);
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+.picture{
+    height: 800px;
+    background-image: url('images/main.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#about{
+    background-color: rgb(100, 65, 230);
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.content p{
+    margin: 40px;
+}
+
+#contacts{
+    background-color: rgb(100, 65, 230);
+
+}
+
+#contacts .info_1{
+    color: yellow;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contacts .info_2{
+    color: orange;
+    font-size: 20px;
+}
+
+#contacts p{
+    color: white;
+    font-size: 15px;
+    margin: 40px;
+}
