@@ -5,37 +5,55 @@
 }
 
 .wrapper{
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-nav{
+.header{
     background-color: rgb(100, 65, 230);
+    padding: 20px 10px;
+    border-bottom: 2px solid white;
 }
 
-nav a{
+.header a{
     color: white;
+    font-family: Arial;
     text-decoration: none;
     font-size: 25px;
     margin-left: 15px;
 }
 
+.logo{
+    background: url(images/logo.png) center center / contain no-repeat;
+    padding: 23px;
+}
+
 .picture{
     height: 800px;
-    background-image: url('images/main.jpg');
+    background-image: url(images/main.jpg);
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #about{
     background-color: rgb(100, 65, 230);
-    font-size: 30px;
     text-align: center;
     color: white;
+    padding: 20px 10px;
+}
+
+#about h1{
+    font-size: 30px;
+}
+
+.content{
+    border-left: 2px solid rgb(100, 65, 230);
+    border-right: 2px solid rgb(100, 65, 230);
 }
 
 .content p{
-    margin: 40px;
+    padding: 20px 40px;
 }
 
 #contacts{
@@ -57,5 +75,5 @@ nav a{
 #contacts p{
     color: white;
     font-size: 15px;
-    margin: 40px;
+    padding: 20px 40px;
 }
