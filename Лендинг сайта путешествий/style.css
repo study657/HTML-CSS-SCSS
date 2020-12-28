@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    background-color: #2a284f;
+    padding: 15px;
+    border-bottom: 3px solid white;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 15px;
+}
+
+.logo{
+    background: url(images/logo.png) center center / contain no-repeat;
+    padding: 20px;
+}
+
+.picture{
+    height: 750px;
+    background: url(images/main.jpg) center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.specification{
+    text-align: center;
+}
+
+.specification h1{
+    color: white;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.specification .button{
+    color: white;
+    font-size: 25px;
+    background: #2a284f;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-left: 5px solid orange;
+}
+
+#about{
+    color: white;
+    text-align: center;
+    background: #2a284f;
+    padding: 15px;
+}
+
+#about h2{
+    font-weight: 400;
+}
+
+.description{
+    padding: 25px;
+    border-left: 3px solid #2a284f;
+    border-right: 3px solid #2a284f;
+}
+
+.description p{
+    margin: 20px;
+}
+
+.blocks{
+    display: flex;
+}
+
+.minipicture_rus{
+    height: 150px;
+    background: url(icons/moscow.png) top center / contain no-repeat;
+    margin-bottom: 10px;
+}
+
+.minipicture_eur{
+    height: 150px;
+    background: url(icons/big-ben.png) top center / contain no-repeat;
+    margin-bottom: 10px;
+}
+
+.minipicture_afr{
+    height: 150px;
+    background: url(icons/pyramids.png) top center / contain no-repeat;
+    margin-bottom: 10px;
+}
+
+.minipicture_northusa{
+    height: 150px;
+    background: url(icons/north-america.png) top center / contain no-repeat;
+    margin-bottom: 10px;
+}
+
+.minipicture_southusa{
+    height: 150px;
+    background: url(icons/south-america.png) top center / contain no-repeat;
+    margin-bottom: 10px;
+}
+
+.minipicture_avs{
+    height: 150px;
+    background: url(icons/kangaroo.png) top center / contain no-repeat;
+    margin-bottom: 10px;
+}
+
+.country{
+    width: 33.3333%;
+    text-align: center;
+    border: 3px solid #2a284f;
+    padding: 10px;
+}
+
+.country h3{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.country .palka{
+    width: 80px;
+    height: 3px;
+    background-color: orange;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#contacts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background: #2a284f;
+}
+
+#contacts .logotip{
+    background: url(images/logo.png) center center / cover no-repeat;
+    padding: 75px;
+}
+
+#contacts p{
+    margin: 20px;
+    color: white;
+}
+
+#contacts .info_1{
+    color: orange;
+    font-size: 37px;
+}
+
+#contacts .info_2{
+    color: orange;
+}
