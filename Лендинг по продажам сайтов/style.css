@@ -60,6 +60,10 @@
     width: 100%;
 }
 
+.header .active{
+    color: blue;
+}
+
 @keyframes logo {
     0%{
 
@@ -294,17 +298,17 @@
 
 .example .working_pic1{
     background: url(pics/site1.jpg) left center / contain no-repeat;
-    padding: 155px;
+    padding: 10px 155px 200px 155px;
 }
 
 .example .working_pic2{
     background: url(pics/site2.jpg) left center / contain no-repeat;
-    padding: 155px;
+    padding: 10px 155px 200px 155px;
 }
 
 .example .working_pic3{
     background: url(pics/site3.jpg) left center / contain no-repeat;
-    padding: 155px;
+    padding: 10px 155px 200px 155px;
 }
 
 
@@ -346,13 +350,21 @@
     color: #6666de;
 }
 
+.news line{
+    height: 4px;
+    width: 67px;
+    background: red;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+
 .news_pic1{
-    background: url(pics/news1.jpg) center center / contain no-repeat;
+    background: url(pics/news1.jpg) center center / cover no-repeat;
     padding: 100px;
 }
 
 .news_pic2{
-    background: url(pics/news2.jpg) center center / contain no-repeat;
+    background: url(pics/news2.jpg) center center / cover no-repeat;
     padding: 100px;
 }
 
@@ -438,6 +450,29 @@
 .block p{
     color: white;
     font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.po{
+    display: flex;
+}
+
+.block .spacing{
+    background: url(icons/placeholder.png) center top / contain no-repeat;
+    padding: 7px;
+    margin-right: 3px;
+}
+
+.block .tel{
+    background: url(icons/telephone.png) right top / contain no-repeat;
+    padding: 7px;
+    margin-right: 3px;
+}
+
+.block .email{
+    background: url(icons/mail.png) right top / contain no-repeat;
+    padding: 7px;
+    margin-right: 3px;
 }
 
 
@@ -450,4 +485,66 @@
     text-align: center;
     color: white;
     font-size: 12px;
+}
+
+
+.chelovek{
+    background: url(chelovek/hombre.png) center center / contain no-repeat;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 140px;
+    animation: chelovek 1s linear infinite;
+    width: 140px;
+    height: 115px;
+}
+
+.cloud1{
+    background: url(chelovek/nube1.png) center center / contain no-repeat;
+    height: 40px;
+    width: 55px;
+    background: url(chelovek/nube1.png) center center / contain no-repeat;
+    height: 40px;
+    width: 55px;
+    position: absolute;
+    right: -18px;
+    animation: cloud1 2s linear infinite;
+}
+
+.cloud1-copy{
+    background: url(chelovek/nube1.png) center center / contain no-repeat;
+    height: 40px;
+    width: 55px;
+    background: url(chelovek/nube1.png) center center / contain no-repeat;
+    height: 40px;
+    width: 55px;
+    position: absolute;
+    right: 110px;
+}
+
+@keyframes chelovek{
+    0%{
+
+    }
+    100%{
+        bottom: 148px;
+        right: 5px;
+    }
+}
+
+@keyframes cloud1{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        top: 50px;
+        right: -27px;
+        opacity: 0.5;
+    }
+    100%{
+        top: 100px;
+        right: -40px;
+        opacity: 0;
+    }
 }
