@@ -30,6 +30,7 @@
     font-size: 25px;
     color: blue;
     cursor: context-menu;
+    white-space: nowrap;
 }
 
 .header div span:after{
@@ -96,7 +97,7 @@
 }
 
 .logo{
-    background: url(../icons/web.png) center center / contain no-repeat;
+    background: url(../../icons/web.png) center center / contain no-repeat;
     animation: logo 5s ease infinite;
     padding: 30px;
 }
@@ -106,7 +107,7 @@
 }
 
 .background-about{
-    background: url(../images/top3.jpg) center center / cover no-repeat;
+    background: url(../../images/top3.jpg) center center / cover no-repeat;
     margin-top: 130px;
     width: 100%;
     height: calc(100vh - 130px);
@@ -217,12 +218,12 @@
 }
 
 .news_pic1{
-    background: url(../pics/news1.jpg) center center / cover no-repeat;
+    background: url(../../pics/news1.jpg) center center / cover no-repeat;
     padding: 100px;
 }
 
 .news_pic2{
-    background: url(../pics/news2.jpg) center center / cover no-repeat;
+    background: url(../../pics/news2.jpg) center center / cover no-repeat;
     padding: 100px;
 }
 
@@ -316,19 +317,19 @@
 }
 
 .block .spacing{
-    background: url(../icons/placeholder.png) center top / contain no-repeat;
+    background: url(../../icons/placeholder.png) center top / contain no-repeat;
     padding: 7px;
     margin-right: 3px;
 }
 
 .block .tel{
-    background: url(../icons/telephone.png) right top / contain no-repeat;
+    background: url(../../icons/telephone.png) right top / contain no-repeat;
     padding: 7px;
     margin-right: 3px;
 }
 
 .block .email{
-    background: url(../icons/mail.png) right top / contain no-repeat;
+    background: url(../../icons/mail.png) right top / contain no-repeat;
     padding: 7px;
     margin-right: 3px;
 }
