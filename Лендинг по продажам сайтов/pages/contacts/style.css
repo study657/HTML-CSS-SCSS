@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    background: white;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    z-index: 99999;
+    box-sizing: border-box;
+}
+
+.header div span{
+    margin-left: 10px;
+    font-size: 25px;
+    color: blue;
+    cursor: context-menu;
+    white-space: nowrap;
+}
+
+.header div span:after{
+    content: ' TOP';
+    color: red;
+}
+
+.header nav a{
+    margin: 0 15px 0 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.header nav a:before{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    bottom: -2px;
+    transition: 0.5s all;
+}
+
+.header nav a:hover:before{
+    width: 100%;
+}
+
+.header .active{
+    color: blue;
+}
+
+@keyframes logo {
+    0%{
+
+    }
+    50%{
+        margin-left: 150px;
+    }
+    100%{
+        
+    }
+}
+
+@keyframes wheel{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        top: 12px;
+        opacity: 1;
+    }
+}
+
+@keyframes wand{
+    0%{
+
+    }
+    100%{
+        bottom: -19px;
+    }
+}
+
+.logo{
+    background: url(../../icons/web.png) center center / contain no-repeat;
+    animation: logo 5s ease infinite;
+    padding: 30px;
+}
+
+.logo:hover{
+    animation-play-state: paused;
+}
+
+
+.background{
+    background: url(../../images/top1.jpg) center center / cover no-repeat;
+    margin-top: 130px;
+    width: 100%;
+    min-height: calc(100vh - 130px);
+    text-align: center;
+}
+
+.shadow{
+    background: rgba(0, 0, 0, 0.48);
+    margin: 0 auto;
+    width: 100%;
+    min-height: calc(100vh - 130px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.shadow .info_4 h1{
+    color: white;
+    font-weight: 300;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.shadow .info_4 span{
+    font-size: 40px;
+    color: white;
+}
+
+.shadow .info_4 p{
+    color: white;
+    font-size: 30px;
+}
+
+.scrolling{
+    width: 20px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 45px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.wheel{
+    width: 1px;
+    height: 6px;
+    border: 2px solid white;
+    border-radius: 45px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 4px;
+    animation: wheel 1.5s linear infinite;
+}
+
+.wand{
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -15px;
+    transform: rotate(45deg);
+    animation: wand 1.5s linear infinite;
+}
+
+
+.content{
+    background-color: rgb(245, 239, 230);
+    padding: 30px 120px;
+}
+
+.content h2{
+    color: #6666de;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.content .line{
+    width: 93px;
+    height: 3px;
+    background: red;
+    margin-bottom: 40px;
+}
+
+.content p{
+    margin-bottom: 20px;
+}
+
+
+.support{
+    padding: 30px 120px;
+    color: #6666de;
+}
+
+.support .line{
+    width: 93px;
+    height: 3px;
+    background: red;
+    margin-bottom: 40px;
+}
+
+.support_pic1{
+    background: url(../../images/woman.jpg) center center / cover no-repeat;
+    width: 200px;
+    height: 200px;
+}
+
+.support_pic2{
+    background: url(../../images/man.jpg) center center / cover no-repeat;
+    width: 200px;
+    height: 200px;
+}
+
+.block_1{
+    display: flex;
+}
+
+.information{
+    background-color: rgb(245, 239, 230);
+    display: flex;
+    width: 50%;
+    margin-right: 10px;
+}
+
+.information_content h3{
+    font-size: 23px;
+    color: black;
+    margin: 20px 20px 0px 20px;
+}
+
+.information_content p{
+    color: black;
+    margin: 70px 20px 0px 20px;
+    font-size: 15px;
+}
+
+.information_content .r{
+    color: #6666de;
+    margin: 0 20px 0px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contacts{
+    background-color: rgb(70, 66, 66);
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.contacts .block{
+    width: 33.3333%;
+    margin: 70px 110px 70px 130px;
+}
+
+.block h3{
+    color: rgb(66, 100, 209);
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.block p{
+    color: white;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.po{
+    display: flex;
+}
+
+.block .spacing{
+    background: url(../../icons/placeholder.png) center top / contain no-repeat;
+    padding: 7px;
+    margin-right: 3px;
+}
+
+.block .tel{
+    background: url(../../icons/telephone.png) right top / contain no-repeat;
+    padding: 7px;
+    margin-right: 3px;
+}
+
+.block .email{
+    background: url(../../icons/mail.png) right top / contain no-repeat;
+    padding: 7px;
+    margin-right: 3px;
+}
+
+
+.bottom{
+    background-color: black;
+    padding: 20px;
+}
+
+.bottom h4{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
