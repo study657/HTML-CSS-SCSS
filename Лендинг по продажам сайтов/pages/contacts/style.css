@@ -218,25 +218,34 @@
 
 .support_pic1{
     background: url(../../images/woman.jpg) center center / cover no-repeat;
-    width: 200px;
-    height: 200px;
+    padding: 100px;
 }
 
 .support_pic2{
     background: url(../../images/man.jpg) center center / cover no-repeat;
-    width: 200px;
-    height: 200px;
+    padding: 100px;
 }
 
 .block_1{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .information{
-    background-color: rgb(245, 239, 230);
     display: flex;
     width: 50%;
-    margin-right: 10px;
+    min-width: 50%;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    flex-basis: 480px;
+    flex-grow: 1;
+}
+
+.information_content{
+    background-color: rgb(245, 239, 230);
+    width: 100%;
 }
 
 .information_content h3{
@@ -271,13 +280,15 @@
 .contacts{
     background-color: rgb(70, 66, 66);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: end;
+    flex-wrap: wrap;
 }
 
 .contacts .block{
     width: 33.3333%;
-    margin: 70px 110px 70px 130px;
+    padding: 70px 110px 70px 130px;
+    box-sizing: border-box;
 }
 
 .block h3{

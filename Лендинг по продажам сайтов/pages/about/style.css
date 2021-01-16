@@ -229,12 +229,19 @@
 
 .news .block_1{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .information{
     display: flex;
+    width: 50%;
     min-width: 50%;
-    margin-right: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    flex-basis: 480px;
+    flex-grow: 1;
+    margin-bottom: 10px;
 }
 
 .information_content{
@@ -291,13 +298,15 @@
 .contacts{
     background-color: rgb(70, 66, 66);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: end;
 }
 
 .contacts .block{
     width: 33.3333%;
-    margin: 70px 110px 70px 130px;
+    padding: 70px 110px 70px 130px;
+    box-sizing: border-box;
 }
 
 .block h3{
