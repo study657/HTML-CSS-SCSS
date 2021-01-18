@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@keyframes logo{
+    0%{
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.background{
+    background: url(images/top1.jpg) center center / cover no-repeat;
+    min-height: 500px;
+}
+
+.shadow{
+    background-color: #676baf69;
+    max-width: 1200px;
+    min-height: 500px;
+    position: relative;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu .logotip{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .logotip:hover{
+    animation: logo 1s;
+}
+
+.logotip .logo{
+    background: url(logo/moscow.png) center center / contain no-repeat;
+    padding: 20px;
+}
+
+.logotip span{
+    font-size: 25px;
+    margin-left: 10px;
+    color: yellow;
+    cursor: context-menu;
+    font-style: italic;
+    font-family: 'Lobster', cursive;
+    margin-right: 30px;
+}
+
+.menu nav{
+    margin-top: 20px;
+}
+
+.menu nav a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.menu nav a:before{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    bottom: -1px;
+    transition: .5s all;
+}
+
+.menu nav a:hover:before{
+    width: 100%;
+}
+
+.information{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.information h2{
+    color: white;
+    font-size: 40px;
+}
+
+.information h1{
+    color: white;
+    font-size: 22px;
+}
+
+.information p{
+    color: white;
+    font-size: 30px;
+}
+
+
+.choose{
+    text-align: center;
+    padding: 20px;
+}
+
+.choose h2{
+    color: rgb(48 85 216);
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.picture1{
+    background: url(images/3_01.jpg) center center / cover no-repeat;
+    min-width: 50%;
+    width: 50%;
+    height: 500px;
+    flex-basis: 600px;
+}
+
+.picture2{
+    background: url(images/2_02.jpg) center center / cover no-repeat;
+    min-width: 50%;
+    width: 50%;
+    height: 500px;
+    flex-basis: 600px;
+}
+
+.picture3{
+    background: url(images/3_03.jpg) center center / cover no-repeat;
+    min-width: 50%;
+    width: 50%;
+    height: 500px;
+    flex-basis: 600px;
+}
+
+.picture4{
+    background: url(images/2_02.jpg) center center / cover no-repeat;
+    min-width: 50%;
+    width: 50%;
+    height: 500px;
+    flex-basis: 600px;
+}
+
+.info{
+    background-color: orange;
+    min-width: 50%;
+    width: 50%;
+    flex-basis: 600px;
+}
+
+.info h2{
+    margin: 20px;
+    font-size: 27px;
+    color: white;
+}
+
+.info p{
+    margin: 20px;
+    color: white;
+    font-size: 17px;
+}
+
+.info h3{
+    text-transform: uppercase;
+    color: white;
+    font-size: 23px;
+    margin: 20px;
+}
+
+.info button{
+    background: orange;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin: 0 20px;
+    border: 2px solid #948a8a;
+    border-radius: 40px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.info button:hover{
+    transform: scale(1.1, 1.1);
+    color: rgb(44 7 243);
+    border: 3px solid rgb(44 7 243);
+}
+
+.info .tr{
+    text-align: right;
+}
+
+.rev{
+    text-align: right;
+}
+
+.margin-rigth{
+    background: white;
+    padding: 40px;
+}
+
+
+.contacts{
+    background-color: rgb(60 85 105);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.poster{
+    width: 30%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex-basis: 360px;
+}
+
+.poster .poster-logotip{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.poster-logo{
+    background: url(logo/moscow.png) center center / contain no-repeat;
+    padding: 20px;
+    margin-right: 10px;    
+}
+
+.poster-logotip span{
+    color: yellow;
+    font-size: 25px;
+    cursor: context-menu;
+    font-style: italic;
+    font-family: 'Lobster', cursive;
+}
+
+.poster p{
+    color: wheat;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.contact{
+    width: auto;
+    margin-top: 52px;
+    margin-bottom: 40px;
+    flex-basis: 239px;
+}
+
+.contact h3{
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: white;
+}
+
+.contact p{
+    color: white;
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+.place-block{
+    display: flex;
+}
+
+.male-block{
+    display: flex;
+}
+
+.tel-block{
+    display: flex;
+}
+
+.place{
+    background: url(icons/placeholder.png) center center / contain no-repeat;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+.male{
+    background: url(icons/mail.png) center center / contain no-repeat;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+.tel{
+    background: url(icons/telephone.png) center center / contain no-repeat;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+.news{
+    width: 30%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-top: 52px;
+    margin-bottom: 40px;
+    flex-basis: 360px;
+}
+
+.news h3{
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: white;
+}
+
+.news .date{
+    color: rgb(37 58 165);
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.news p{
+    color: wheat;
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+
+.bottom{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.copyrigth{
+    color: white;
+    font-size: 15px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.design{
+    color: white;
+    font-size: 15px;
+}
+
+.social{
+    display: flex;
+}
+
+.social .vk{
+    background: url(social/vk.svg) center center / cover no-repeat;
+    padding: 15px;
+    margin-right: 5px;
+}
+
+.social .facebook{
+    background: url(social/facebook.svg) center center / cover no-repeat;
+    padding: 15px;
+    margin-right: 5px;
+}
+
+.social .inst{
+    background: url(social/instagram.svg) center center / cover no-repeat;
+    padding: 15px;
+}
