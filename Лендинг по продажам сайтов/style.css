@@ -38,16 +38,19 @@
     color: red;
 }
 
-.header nav a{
+.header nav a,
+.header nav span{
     margin: 0 15px 0 15px;
     color: black;
     text-decoration: none;
     font-size: 25px;
     white-space: nowrap;
     position: relative;
+    cursor: pointer;
 }
 
-.header nav a:before{
+.header nav a:before,
+.header nav span:before{
     content: '';
     width: 0;
     height: 3px;
@@ -57,7 +60,8 @@
     transition: 0.5s all;
 }
 
-.header nav a:hover:before{
+.header nav a:hover:before,
+.header nav span:hover:before{
     width: 100%;
 }
 
@@ -586,6 +590,86 @@
     left: 68px;
     bottom: -13px;
     animation: fire 0.1s ease-in-out infinite;
+}
+
+
+.pop-up{
+    background: rgb(102 102 222 / 44%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-center{
+    background: rgb(165 72 195);
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.pop-up-center h2{
+    color: rgb(3 255 11);
+    font-size: 28px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+[type="text"],
+[type="password"],
+[type="date"],
+[type="time"]{
+    border: 2px solid rgb(16 93 232);
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 7px;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+[type="submit"]{
+    background: rgb(82 239 138);
+    padding: 10px 40px;
+    width: 50%;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.closeButton{
+    background: url(icons/cancel.svg) center center / contain no-repeat;
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.visible{
+    display: none;
+    background: url(icons/visibility.svg) center center / contain no-repeat;
+    padding: 10px;
+    position: absolute;
+    right: 130px;
+    top: 171px;
+    cursor: pointer;
+}
+
+.invisible{
+    display: block;
+    background: url(icons/no-visibility.svg) center center / contain no-repeat;
+    padding: 10px;
+    position: absolute;
+    right: 130px;
+    top: 171px;
+    cursor: pointer;
 }
 
 @keyframes chelovek{
