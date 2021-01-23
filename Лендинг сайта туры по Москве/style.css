@@ -66,16 +66,19 @@
     margin-top: 20px;
 }
 
-.menu nav a{
+.menu nav a,
+.menu nav span{
     margin-right: 20px;
     text-decoration: none;
     color: white;
     font-size: 20px;
     white-space: nowrap;
     position: relative;
+    cursor: pointer;
 }
 
-.menu nav a:before{
+.menu nav a:before,
+.menu nav span:before{
     content: '';
     width: 0;
     height: 3px;
@@ -85,7 +88,8 @@
     transition: .5s all;
 }
 
-.menu nav a:hover:before{
+.menu nav a:hover:before,
+.menu nav span:hover:before{
     width: 100%;
 }
 
@@ -208,11 +212,7 @@
     border: 3px solid rgb(44 7 243);
 }
 
-.info .tr{
-    text-align: right;
-}
-
-.rev{
+.right{
     text-align: right;
 }
 
@@ -328,17 +328,17 @@
     color: white;
 }
 
-.news .date{
-    color: rgb(37 58 165);
-    font-size: 17px;
-    margin-bottom: 10px;
-    font-style: italic;
-}
-
 .news p{
     color: wheat;
     line-height: 1.5;
     font-size: 17px;
+}
+
+.news p:nth-child(odd){
+    color: rgb(37 58 165);
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-style: italic;
 }
 
 
@@ -381,4 +381,78 @@
 .social .inst{
     background: url(social/instagram.svg) center center / cover no-repeat;
     padding: 15px;
+}
+
+
+
+.pop-up-general{
+    background: rgb(48 85 216 / 55%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+}
+
+.pop-up{
+    border: 2px solid rgb(199 25 154);
+    background: rgb(99 60 60);
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.pop-up h2{
+    color: rgb(48 85 216);
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+[type="text"],
+[type="password"],
+[type="date"]{
+    border: 2px solid rgb(95 156 214);
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+[type="submit"]{
+    padding: 10px 40px;
+    background: rgb(47 140 193);
+    font-size: 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.close{
+    background: url(icons/cancel.svg) center center / contain no-repeat;
+    padding: 15px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.no-visible{
+    display: block;
+    background: url(icons/no-visibility.svg) center center / contain no-repeat;
+    padding: 10px;
+    position: absolute;
+    top: 135px;
+    right: 61px;
+    cursor: pointer;
+}
+
+.visible{
+    display: none;
+    background: url(icons/visibility.svg) center center / contain no-repeat;
+    padding: 10px;
+    position: absolute;
+    top: 135px;
+    right: 61px;
+    cursor: pointer;
 }
