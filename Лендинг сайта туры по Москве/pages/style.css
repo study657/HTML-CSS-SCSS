@@ -180,6 +180,87 @@
 }
 
 
+.feedback{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.conBlock{
+    width: 50%;
+    padding: 10px 60px;
+    box-sizing: border-box;
+    flex-basis: 600px;
+}
+
+.forms{
+    width: 50%;
+    padding: 10px 60px;
+    box-sizing: border-box;
+    flex-basis: 600px;
+}
+
+.forms h3{
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.conBlock p{
+    font-size: 20px;
+}
+
+.place_conBlock{
+    background: url(../icons/placeholder.png) center center / contain no-repeat;
+    padding: 25px;
+    margin-right: 5px;
+}
+
+.email_conBlock{
+    background: url(../icons/mail.png) center center / contain no-repeat;
+    padding: 25px;
+    margin-right: 5px;
+}
+
+.tel_conBlock{
+    background: url(../icons/telephone.png) center center / contain no-repeat;
+    padding: 25px;
+    margin-right: 5px;
+}
+
+.genezis_conBlock{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+[type="text"],
+[type="email"]{
+    border: 2px solid orange;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+[name="massage"]{
+    border: 2px solid orange;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 70px;
+}
+
+[type="submit"]{
+    width: 100%;
+    padding: 10px 40px;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
 .contacts{
     background-color: rgb(60 85 105);
     display: flex;
