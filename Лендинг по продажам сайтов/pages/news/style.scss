@@ -1,0 +1,642 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial;
+}
+
+
+
+
+$wrapper_size: 1200px;
+$general_bacground: rgb(102, 102, 222);
+$background_cards: rgb(245, 239, 230);
+$line_color: red;
+
+
+
+
+@mixin news_cards($picture, $padding){
+    background: url($picture) center center / cover no-repeat;
+    padding: $padding;
+}
+
+@mixin contacts_icon_pic($picture) {
+    background: url($picture) center top / contain no-repeat;
+    padding: 7px;
+    margin-right: 3px;
+}
+
+@mixin closed_lines($margin) {
+    width: 30px;
+    border: 2px solid black;
+    margin-bottom: $margin;
+}
+
+
+
+
+
+@keyframes wheel{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        top: 12px;
+        opacity: 1;
+    }
+}
+
+@keyframes wand{
+    0%{
+
+    }
+    100%{
+        bottom: -19px;
+    }
+}
+
+@keyframes burger_menu{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 129px;
+    }
+}
+
+
+
+
+.wrapper{
+    max-width: $wrapper_size;
+    margin: 0 auto;
+}
+
+
+
+
+.header{
+    background: white;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    z-index: 99999;
+    box-sizing: border-box;
+
+    .mun span{
+        margin-left: 10px;
+        font-size: 25px;
+        color: $general_bacground;
+        cursor: context-menu;
+        white-space: nowrap;
+        &:after{
+            content: ' TOP';
+            color: red;
+        }
+    }
+
+    .usually-menu a, nav span{
+        margin: 0 15px 0 15px;
+        color: black;
+        text-decoration: none;
+        font-size: 25px;
+        white-space: nowrap;
+        position: relative;
+        cursor: pointer;
+        &:before{
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: black;
+            position: absolute;
+            bottom: -2px;
+            transition: 0.5s all;
+        }
+        &:hover:before{
+            width: 100%;
+        }
+    }
+
+    .logo{
+        background: url(../../icons/web.png) center center / contain no-repeat;
+        padding: 30px;
+    }
+
+    .usually-menu .active{
+        color: blue;
+    }
+}
+
+
+
+
+.background{
+    background: url(../../images/top2.jpg) center center / cover no-repeat;
+    margin-top: 130px;
+    width: 100%;
+    min-height: calc(100vh - 130px);
+    text-align: center;
+
+    .shadow{
+        background: rgba(0, 0, 0, 0.48);
+        margin: 0 auto;
+        width: 100%;
+        min-height: calc(100vh - 130px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .info_3 h1{
+            color: white;
+            font-weight: 300;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .info_3 p{
+            color: white;
+            font-size: 30px;
+        }
+    }
+
+    .scrolling{
+        width: 20px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 45px;
+        position: absolute;
+        bottom: 30px;
+    }
+
+    .wheel{
+        width: 2px;
+        height: 6px;
+        border: 2px solid white;
+        border-radius: 45px;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        top: 4px;
+        animation: wheel 1.5s linear infinite;
+    }
+    
+    .wand{
+        width: 5px;
+        height: 5px;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -15px;
+        transform: rotate(45deg);
+        animation: wand 1.5s linear infinite;
+    }
+}
+
+
+
+
+.content{
+    background-color: $background_cards;
+    padding: 30px 120px;
+
+    h2{
+        color: $general_bacground;
+        font-size: 35px;
+        font-weight: 300;
+    }
+
+    .line{
+        width: 93px;
+        height: 3px;
+        background: $line_color;
+        margin-bottom: 40px;
+    }
+
+    p{
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+.news{
+    padding: 30px 120px;
+    color: $general_bacground;
+
+    .line{
+        width: 93px;
+        height: 3px;
+        background: $line_color;
+        margin-bottom: 40px;
+    }
+
+    &_pic1{
+        @include news_cards('../../pics/news1.jpg', 100px);
+    }
+
+    &_pic2{
+        @include news_cards('../../pics/news2.jpg', 100px);
+    }
+
+    .block_1{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .information{
+            display: flex;
+            min-width: 50%;
+            width: 50%;
+            padding-right: 10px;
+            box-sizing: border-box;
+            flex-basis: 480px;
+            margin-bottom: 10px;
+            flex-grow: 1;
+
+            .information_content{
+                background-color: $background_cards;
+
+                h3{
+                    margin: 30px 10px 0px 10px;
+                    font-weight: 100;
+                    font-size: 15px;
+                    color: black;
+                    font-style: italic;
+                }
+
+                p{
+                    margin: 0px 10px 40px 10px;
+                    font-weight: 300;
+                    font-size: 17px;
+                    color: black;
+                }
+
+                a{
+                    margin: 0px 0 0px 140px;
+                    font-weight: 600;
+                    font-size: 17px;
+                    color: $general_bacground;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.cooperation{
+    background-color: $general_bacground;
+    padding: 30px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3{
+        color: white;
+        font-weight: 200;
+        margin-right: 20px;
+    }
+
+    button{
+        padding: 10px 30px 10px 30px;
+        background-color: $general_bacground;
+        color: white;
+        border: 1px solid white;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+}
+
+
+
+
+.contacts{
+    background-color: rgb(70, 66, 66);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-wrap: wrap;
+
+    .block{
+        width: 33.3333%;
+        min-width: 33.3333%;
+        padding: 70px 110px 70px 130px;
+        box-sizing: border-box;
+        flex-basis: 380px;
+
+        h3{
+            color: rgb(66, 100, 209);
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+
+        p{
+            color: white;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .po{
+            display: flex;
+        }
+
+        .spacing{
+            @include contacts_icon_pic('../../icons/placeholder.png');
+        }
+
+        .tel{
+            @include contacts_icon_pic('../../icons/telephone.png');
+        }
+
+        .email{
+            @include contacts_icon_pic('../../icons/mail.png');
+        }
+    }
+}
+
+
+
+
+.bottom{
+    background-color: black;
+    padding: 20px;
+
+    h4{
+        text-align: center;
+        color: white;
+        font-size: 12px;
+    }
+}
+
+
+
+
+.burger-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.burger-nav{
+    display: none;
+}
+
+.closed {
+    .line1{
+        @include closed_lines(5px);
+    }
+
+    .line2{
+        @include closed_lines(5px);
+    }
+
+    .line3{
+        @include closed_lines(0);
+    }
+}
+
+
+
+
+// Адаптивная верстка сайта под мобильное устройство
+@media (max-width: 1220px){
+    .header .usually-menu{
+        display: none;
+    }
+
+    .burger-menu{
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 88px;
+        z-index: 9999999;
+    }
+
+    .open .line1{
+        width: 30px;
+        border: 2px solid black;
+        margin-bottom: -23px;
+        transform: rotate(135deg);
+        margin-top: 10px;
+    }
+
+    .open .line2{
+        display: none;
+    }
+
+    .open .line3{
+        width: 30px;
+        border: 2px solid black;
+        margin-top: 20px;
+        transform: rotate(45deg);
+    }
+
+    .burger-nav{
+        display: none;
+        min-width: 100%;
+        min-height: 225px;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        z-index: 999999999999;
+        background: rgb(0, 0, 0);
+        animation: burger_menu 1s linear both;
+        div{
+            margin: 18px;
+            a{
+                color: white;
+                font-size: 30px;
+                text-decoration: none;
+            }
+        }
+
+        .active{
+            color: blue;
+        }
+    }
+
+
+    .content{
+        h2{
+            text-align: center;
+        }
+
+        .line{
+            margin: 12px auto;
+        }
+    }
+
+
+    .news{
+        h2{
+            text-align: center;
+        }
+
+        .line{
+            margin: 12px auto;
+        }
+
+        .block_1{
+            .information{
+                min-width: 60%;
+                justify-content: center;
+
+                .information_content{
+                    width: 270px;
+                }
+            }
+        }
+    }
+
+
+    .cooperation{
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+
+        h3{
+            width: 100%;
+        }
+
+        button{
+            margin-top: 10px;
+        }
+    }
+
+
+    .contacts{
+        flex-wrap: wrap;
+        text-align: center;
+
+        .block{
+            width: 60%;
+            min-width: 60%;
+            padding: 5px 110px 20px 130px;
+
+            .con{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .po{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 450px){
+    .scrolling{
+        display: none;
+    }
+
+
+    .content{
+        padding: 20px 10px;
+
+        h2{
+            font-size: 28px;
+        }
+    }
+
+
+    .news{
+        padding: 10px;
+
+        .block_1{
+            flex-wrap: wrap;
+
+            .information{
+                flex-wrap: wrap;
+                padding-right: 0;
+
+                .news_pic1{
+                    @include news_cards('../../pics/news1.jpg', 180px);
+                }
+
+                .news_pic2{
+                    @include news_cards('../../pics/news2.jpg', 180px);
+                }
+
+                .information_content{
+                    width: 361px;
+                    height: 270px;
+
+                    p{
+                        margin: 0px 10px 128px 10px;
+                    }
+
+                    a{
+                        margin: 120px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .cooperation h3{
+        margin-right: 0;
+    }
+
+    .contacts{
+        .block{
+            padding: 5px 70px 20px 70px;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 375px){
+    .news {
+        .block_1{
+            .information{
+                padding-right: 0;
+
+                .news_pic1{
+                    padding: 150px;
+                }
+        
+                .news_pic2{
+                    padding: 150px;
+                }
+
+                .information_content{
+                    width: 300px;
+
+                    a{
+                        margin: 95px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    .cooperation{
+        padding: 20px;
+    }
+}

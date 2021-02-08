@@ -2,18 +2,18 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>news</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="header">
-            <div>
+            <div class="mun">
                 <a href="#" class="logo"></a>
                 <span>GO TO</span>
             </div>
-            <nav>
+            <nav class="usually-menu">
                 <a href="../../index.html">Главная</a>
                 <a href="news.html" class="active">Новости</a>
                 <a href="../about/about.html">О компании</a>
@@ -104,7 +104,7 @@
             </div>
             <div class="block">
                 <h3>КОНТАКТЫ</h3>
-                <div>
+                <div class="con">
                     <div class="po">
                         <div class="spacing"></div>
                         <p>Москва, Большая спасская 12</p>
@@ -124,6 +124,31 @@
         <div class="bottom">
             <h4>2018 Все права защищены</h4>
         </div>
+
+        <div class="burger-menu closed">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+        <div class="burger-nav">
+            <nav>
+                <div>
+                    <a href="../../index.html">Главная</a>
+                </div>
+                <div>
+                    <a href="news.html" class="active">Новости</a>
+                </div>
+                <div>
+                    <a href="../about/about.html">О компании</a>
+                </div>
+                <div>
+                    <a href="../contacts/contacts.html">Контакты</a>
+                </div>
+            </nav>
+        </div>
     </div>
+
+    <script src="../../pages_script.js"></script>
 </body>
 </html>
