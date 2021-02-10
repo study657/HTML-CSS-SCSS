@@ -1,0 +1,717 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+
+
+$wrapper_size: 1200px;
+$color_textNameSite: yellow;
+$color_text: white;
+
+
+
+
+@mixin picture-staff($picture){
+    background: url($picture) center center / cover no-repeat;
+    width: 300px;
+    height: 150px;
+}
+
+@mixin feedback_icons($icon){
+    background: url($icon) center center / contain no-repeat;
+    padding: 25px;
+    margin-right: 5px;
+}
+
+@mixin contact_icons($icon){
+    background: url($icon) center center / contain no-repeat;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+@mixin social_icons($icon){
+    background: url($icon) center center / cover no-repeat;
+    padding: 15px;
+    margin-right: 5px;
+}
+
+
+
+
+@keyframes logo{
+    0%{
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes burger-menu{
+    0%{
+
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes burger-icon{
+    0%{
+
+    }
+    100%{
+        right: 20px;
+    }
+}
+
+
+
+
+.wrapper{
+    max-width: $wrapper_size;
+    margin: 0 auto;
+}
+
+
+
+
+.background{
+    background: url(../images/top2.jpg) center center / cover no-repeat;
+    min-height: 500px;
+
+    .shadow{
+        background-color: rgba(0, 0, 0, 0.31);
+        max-width: $wrapper_size;
+        min-height: 500px;
+        position: relative;
+
+        .menu{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .logotip{
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover{
+                    animation: logo 1s;
+                }
+
+                .logo{
+                    background: url(../logo/moscow.png) center center / contain no-repeat;
+                    padding: 20px;
+                }
+
+                span{
+                    font-size: 25px;
+                    margin-left: 10px;
+                    color: $color_textNameSite;
+                    cursor: context-menu;
+                    font-style: italic;
+                    font-family: 'Lobster', cursive;
+                    margin-right: 30px;
+                }
+            }
+
+            nav{
+                margin-top: 20px;
+
+                a{
+                    margin-right: 20px;
+                    text-decoration: none;
+                    color: $color_text;
+                    font-size: 20px;
+                    white-space: nowrap;
+                    position: relative;
+
+                    &:before{
+                        content: '';
+                        width: 0;
+                        height: 3px;
+                        background: white;
+                        position: absolute;
+                        bottom: -1px;
+                        transition: .5s all;
+                    }
+
+                    &:hover:before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .information{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            h2{
+                color: $color_text;
+                font-size: 40px;
+            }
+
+            h1{
+                color: $color_text;
+                font-size: 22px;
+            }
+
+            p{
+                color: $color_text;
+                font-size: 30px;
+            }
+        }
+    }
+
+    .burger-menu{
+        display: none;
+    }
+
+    .burger-icon{
+        display: none;
+    }
+}
+
+
+
+
+.contacts-content{
+    h2{
+        color: rgb(48, 85, 216);
+        text-align: center;
+        padding: 20px;
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+
+    .ccc{
+        padding: 10px 60px;
+        color: black;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .staff{
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+
+        .block-staff{
+            display: flex;
+            padding: 10px 60px;
+            width: 50%;
+            box-sizing: border-box;
+            flex-basis: 600px;
+
+            .picture-staff1{
+                @include picture-staff('../images/man.jpg');
+            }
+
+            .picture-staff2{
+                @include picture-staff('../images/woman.jpg');
+            }
+
+            .info-staff{
+                background-color: orange;
+                width: -webkit-fill-available;
+
+                .name{
+                    font-size: 20px;
+                }
+
+                p{
+                    padding: 10px 30px 0 30px;
+                    font-weight: 600;
+                    font-size: 13px;
+
+                    &:last-child{
+                        color: rgb(48, 85, 216);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.feedback{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+
+    .conBlock{
+        width: 50%;
+        padding: 10px 60px;
+        box-sizing: border-box;
+        flex-basis: 600px;
+
+        p{
+            font-size: 20px;
+        }
+
+        .genezis_conBlock{
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            .place_conBlock{
+                @include feedback_icons('../icons/placeholder.png');
+            }
+    
+            .email_conBlock{
+                @include feedback_icons('../icons/mail.png');
+            }
+    
+            .tel_conBlock{
+                @include feedback_icons('../icons/telephone.png');
+            }
+        }
+    }
+
+    .forms{
+        width: 50%;
+        padding: 10px 60px;
+        box-sizing: border-box;
+        flex-basis: 600px;
+
+        h3{
+            font-size: 15px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        [type="text"],
+        [type="email"]{
+            border: 2px solid orange;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+
+        [name="massage"]{
+            border: 2px solid orange;
+            width: 100%;
+            box-sizing: border-box;
+            padding-bottom: 70px;
+        }
+
+        [type="submit"]{
+            width: 100%;
+            padding: 10px 40px;
+            background: black;
+            color: $color_text;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+.contacts{
+    background-color: rgb(60, 85, 105);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .poster{
+        width: 30%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        flex-basis: 360px;
+
+        .poster-logotip{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .poster-logo{
+                background: url(../logo/moscow.png) center center / contain no-repeat;
+                padding: 20px;
+                margin-right: 10px;    
+            }
+
+            span{
+                color: $color_textNameSite;
+                font-size: 25px;
+                cursor: context-menu;
+                font-style: italic;
+                font-family: 'Lobster', cursive;
+            }
+        }
+
+        p{
+            color: wheat;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+    }
+
+    .contact{
+        width: auto;
+        margin-top: 52px;
+        margin-bottom: 40px;
+        flex-basis: 239px;
+
+        h3{
+            margin-bottom: 20px;
+            font-size: 25px;
+            color: $color_text;
+        }
+
+        p{
+            color: $color_text;
+            line-height: 1.5;
+            font-size: 17px;
+        }
+
+        .place-block{
+            display: flex;
+
+            .place{
+                @include contact_icons('../icons/placeholder.png');
+            }
+        }
+        
+        .male-block{
+            display: flex;
+
+            .male{
+                @include contact_icons('../icons/mail.png');
+
+            }
+        }
+        
+        .tel-block{
+            display: flex;
+
+            .tel{
+                @include contact_icons('../icons/telephone.png');
+            }
+        }
+    }
+
+    .news{
+        width: 30%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-top: 52px;
+        margin-bottom: 40px;
+        flex-basis: 360px;
+
+        h3{
+            margin-bottom: 20px;
+            font-size: 25px;
+            color: $color_text;
+        }
+
+        p{
+            color: wheat;
+            line-height: 1.5;
+            font-size: 17px;
+
+            &:nth-child(odd){
+                color: rgb(37, 58, 165);
+                font-size: 17px;
+                margin-bottom: 10px;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+
+
+
+.bottom{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+
+    .copyrigth{
+        color: $color_text;
+        font-size: 15px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+
+    .design{
+        color: $color_text;
+        font-size: 15px;
+    }
+
+    .social{
+        display: flex;
+
+        .vk{
+            @include social_icons('../social/vk.svg');
+        }
+
+        .facebook{
+            @include social_icons('../social/facebook.svg');
+        }
+
+        .inst{
+            @include social_icons('../social/instagram.svg');
+        }
+    }
+}
+
+
+
+
+@media (max-width: 1216px){
+    .feedback .conBlock{
+        display: none;
+    }
+}
+
+
+
+
+@media (max-width: 975px){
+    .contacts{
+        justify-content: center;
+
+        .poster{
+            width: 60%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            flex-basis: unset;
+            text-align: center;
+
+            .poster-logotip{
+                justify-content: center;
+            }
+        }
+
+        .contact{
+            width: 50%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            flex-basis: unset;
+            text-align: center;
+
+            .place-block, .male-block, .tel-block{
+                justify-content: center;
+            }
+        }
+
+        .news{
+            width: 60%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            flex-basis: unset;
+            text-align: center;
+        }
+    }
+
+    .background .shadow .menu{
+        display: none;
+    }
+
+    .background .shadow {
+        .burger-menu{
+            display: none;
+            background: rgba(111, 83, 83, 0.61);
+            position: fixed;
+            right: 0;
+            left: 1200px;
+            bottom: 0;
+            top: 0;
+            z-index: 99999;
+            animation: burger-menu 2s both;
+    
+            .logotip{
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 200px;
+    
+                .logo{
+                    background: url(../logo/moscow.png) center center / contain no-repeat;
+                    padding: 20px;
+                }
+    
+                span{
+                    font-size: 25px;
+                    margin-left: 10px;
+                    color: $color_textNameSite;
+                    cursor: context-menu;
+                    font-style: italic;
+                    font-family: 'Lobster', cursive;
+                    margin-right: 30px;
+                }
+            }
+    
+            nav{
+                margin-top: 20px;
+                text-align: center;
+                width: 200px;
+    
+                a{
+                    margin-right: 20px;
+                    text-decoration: none;
+                    color: rgb(44, 247, 50);
+                    font-size: 30px;
+                    white-space: nowrap;
+                    position: relative;
+                    cursor: pointer;
+    
+                    &:before{
+                        content: '';
+                        width: 0;
+                        height: 3px;
+                        background: rgb(204, 12, 12);
+                        position: absolute;
+                        bottom: -1px;
+                        transition: .5s all;
+                    }
+    
+                    &:hover:before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .burger-icon{
+            z-index: 99999999;
+            display: block;
+            cursor: pointer;
+            position: fixed;
+            right: 20px;
+            top: 30px;
+            
+            .line1{
+                width: 30px;
+                border: 3px solid red;
+                margin-bottom: 4px;
+            }
+
+            .line2{
+                width: 30px;
+                border: 3px solid red;
+                margin-bottom: 4px;
+            }
+
+            .line3{
+                width: 30px;
+                border: 3px solid red;
+                margin-bottom: 4px;
+            }
+
+
+            .line1-open{
+                margin-bottom: -5px;
+                transform: rotate(45deg);
+            }
+
+            .line3-open{
+                transform: rotate(-45deg);
+            }
+        }
+
+        .open{
+            top: 45px;
+            right: 1200px;
+            animation: burger-icon 2s both;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 700px){
+    .contacts-content .ccc{
+        padding: 10px 20px;
+    }
+
+    .bottom{
+        .copyrigth{
+            display: none;
+        }
+
+        .design{
+            display: none;
+        }
+
+        .social{
+            justify-content: center;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 450px){
+    .contacts-content{
+        .staff{
+            .block-staff{
+                padding: 0;
+                width: 90%;
+                flex-basis: unset;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .picture-staff1{
+                    width: 90%;
+                    height: 300px;
+                }
+
+                .picture-staff2{
+                    width: 90%;
+                    height: 300px;
+                }
+
+                .info-staff{
+                    width: 90%;
+                    height: 150px;
+                    text-align: center;
+                    margin-bottom: 10px;
+
+                    .name{
+                        font-size: 25px;
+                    }
+
+                    p{
+                        font-size: 19px;
+                        padding: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 380px){
+    .contacts-content .staff .block-staff .info-staff{
+        height: 170px;
+    }
+}

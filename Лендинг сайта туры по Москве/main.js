@@ -1,5 +1,5 @@
 let popUp           = document.querySelector('.pop-up-general');
-let up              = document.querySelector('.up');
+let up              = document.querySelectorAll('.up');
 let closeButton     = document.querySelector('.close');
 let noVisible       = document.querySelector('.no-visible');
 let visible         = document.querySelector('.visible');
@@ -7,9 +7,11 @@ let inputPass       = document.querySelector('[name="pass"]');
 let inputRange      = document.querySelector('[type="range"]');
 let result          = document.querySelector('.result');
 
-up.addEventListener('click', function(){
-    popUp.style.display = 'flex';
-});
+for(let button of up){
+    button.addEventListener('click', function(){
+        popUp.style.display = 'flex';
+    });
+}
 
 closeButton.addEventListener('click', function(){
     popUp.style.display = 'none';
